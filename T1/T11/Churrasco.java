@@ -6,17 +6,16 @@ public class Churrasco {
 	
 	void verificarConsumo(Pessoa p1){
 		
-		if(p1.idade<=3 || p1.vegetariana == true)
+		if(p1.idade<=3 || p1.vegetariana == true){
 			qtCarne = qtCarne + 0;
-			else if(p1.idade>3 && p1.idade <=12)
-				{
-						qtCarne = qtCarne + 1;
-				}
-			else 
-				{
-							qtCarne = qtCarne + 2;
-				}
+		}else if(p1.idade>3 && p1.idade <=12){
+			qtCarne = qtCarne + 1;
+		}else{
+			qtCarne = qtCarne + 2;
+		}
+		
 		contador++;
+		
 	}
 	
 	void mediaConsumo(Double c, int i) {
