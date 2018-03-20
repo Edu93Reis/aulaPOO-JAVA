@@ -1,0 +1,44 @@
+package T24;
+
+public class Loja {
+	public static void main(String arg[]) {
+		Produtos p1 = new Produtos();
+		
+		p1.setTipo(Livros.Epub);
+		p1.precoLivro(Livros.Epub);
+		System.out.println("O preço do "+ p1.getTipo() +"  é: "+ p1.getPreco() + " reais");
+		p1.setDescription("Epub é divertido");
+		System.out.println("Descrição Epub: " + p1.getDescription());
+		
+		Produtos p2 = new Produtos();
+		
+		p2.setTipo(Livros.Livro_Fisico);
+		p2.precoLivro(Livros.Livro_Fisico);
+		System.out.println("O "+ p2.getTipo() +" custa: " + p2.getPreco() + " reais");
+		System.out.println("Descrição Livro Fisíco: " + p2.getDescription());
+	
+		Produtos p3 = new Produtos();
+		
+		p3.setTipo(Livros.PDF);
+		p3.precoLivro(Livros.PDF);
+		System.out.println("O preço do "+ p3.getTipo() +" é: "+ p3.getPreco() + " reais");
+		p3.setDescription("PDF");
+		System.out.println("Descrição PDF: " + p3.getDescription());
+		
+	}
+}
+
+/*
+Uma loja vende livros de vários formatos a preço fixo.
+Um EPUB custa 20 reais, um pdf 40 reais e um físico 80 reais. 
+
+A informação de preco e de tipo devem ser retornados por métodos. Uma loja
+pode vender qualquer um deles. 
+
+A loja deverá poder exibir as informa-
+ções de seus produtos, caso os tenha disponível. 
+
+Implemente todas as classes envolvidas nessa situação, 
+lembre-se de usar construtores e metodos get, se necessário. 
+Implemente também alguns testes. É proíbido usar conceitos que ainda não foram abordados.
+ */
