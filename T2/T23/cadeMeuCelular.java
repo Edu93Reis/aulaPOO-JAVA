@@ -18,10 +18,13 @@ public class cadeMeuCelular {
 		c1.desligaCelular();
 		System.out.println("Carga final: "+b1.getCarga());
 		c1.tocaSom();
+		c1.ligaCelular();
+		c1.tocaSom();
 		
 		Bateria b2 = new Bateria(23);
 		c1.setBateria(b2);
 		c1.ligaCelular();
+		
 		System.out.println(b2.getCarga());
 		
 		Celular c2 = new Celular("Caio", b2);

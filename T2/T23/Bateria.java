@@ -4,7 +4,7 @@ public class Bateria {
 	private int carga = 0;
 	
 	public Bateria(int carga){
-		if(carga<=100) {
+		if(carga<=100 && carga>=0) {
 			this.carga = carga;
 		}else {
 			this.carga = 100;
@@ -13,7 +13,7 @@ public class Bateria {
 	
 	//necessário para fazer as alterações de alimentação de carga durante os processos de ligar/desligar
 	public void setCarga(int carga){
-		if(carga<=100) {
+		if(carga<=100 && carga>=0) {
 			this.carga = carga;
 		}else {
 			this.carga = 100;

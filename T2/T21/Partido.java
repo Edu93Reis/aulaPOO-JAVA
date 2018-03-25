@@ -11,6 +11,9 @@ public class Partido {
 		this.num = num;
 	}	
 	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 	
 	public String getNome() {
 		return this.nome;

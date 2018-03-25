@@ -12,38 +12,17 @@ public class Candidato {
 	}
 	
 	public Candidato(String nome, String nacionalidade, Partido partido) {
-		if(nome.equals(null)) {
-			System.out.println("Candidato deve possuir nome: ");
-			this.nome = a.nextLine();
+		this.nome = nome;
+		this.nacionalidade = nacionalidade;
+		if(partido.getNome().equals(null)) {
+			Scanner a = new Scanner(System.in);
+			System.out.println("Nome do partido é obrigatório, digite nome: ");
+			String p1 = a.nextLine();
+			partido.setNome(p1);
+			a.close();
 		}else {
-			this.nome = nome;
+			this.partido = partido;
 		}
-		if(nacionalidade.equals("")) {
-			System.out.println("Candidato deve possuir nacionalidade: ");
-			this.nacionalidade = a.nextLine();
-		}else {
-			this.nacionalidade = nacionalidade;
-		}		
-			
-		if(partido.getNome().equals("") && this.nacionalidade.equals("Brasileiro")) {
-				System.out.println("Candidato deve possuir partido registrado!! ");
-				
-				System.out.println("Digite partido: ");
-				String nP = a.nextLine();
-				System.out.println("Digite ideologia: ");
-				String iD = a.nextLine();
-				System.out.println("Digite sigla: ");
-				String si = a.nextLine();
-				System.out.println("Digite numero: ");
-				int num = a.nextInt();
-				
-				Partido p = new Partido(nP, iD, si, num);
-				
-				a.close();
-		}else {
-				this.partido = partido;
-		}
-		
 	}
 	
 	public String getNome() {
@@ -56,9 +35,8 @@ public class Candidato {
 
 	public Partido getPartido() {
 		return this.partido;
-	} 
+	}
 	
-	// passgem de objeto (conjunto de informações)
 	public void setPartido(Partido partido) {
 		this.partido = partido;
 	}

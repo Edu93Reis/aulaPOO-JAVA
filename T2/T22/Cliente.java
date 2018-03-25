@@ -4,7 +4,7 @@ public class Cliente {
 	private String nome;
 	private double saldo, limite;
 	
-	protected Cliente(String nome, double saldo, double limite) {
+	public Cliente(String nome, double saldo, double limite) {
 		this.nome = nome;
 		this.saldo = saldo;
 		this.limite = limite;

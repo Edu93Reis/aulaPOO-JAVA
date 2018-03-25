@@ -9,8 +9,8 @@ public class Eleicao {
 		Partido p4 = new Partido("", "Nenhuma", "BLA", 14);
 		Candidato c1 = new Candidato("Marcelinho", "Brasileiro", p1);
 		Candidato c2 = new Candidato("Ronaldo", "Americano", p2);
-		Candidato c3 = new Candidato("", "Grego", p3);
-
+		Candidato c3 = new Candidato("Tiririca", "Grego", p3);
+		
 		System.out.println("Candidato: "+ c1.getNome() + " de nacionalidade " + c1.getNacionalidade() +
 				" está no partido " + c1.getPartido().getNome());
 		c1.setPartido(p3);
