@@ -34,18 +34,13 @@ public class Cliente {
 			this.saldo -= val;
 			return this.saldo;
 		}else {
-			System.out.println("Saldo de: "+ getRestricao() +" é insuficiente para um saque neste valor!");
+			System.out.println("Saldo de: "+ checarSaldo() +" é insuficiente para um saque neste valor!");
 			return 0;
 		}
 	}
 	
-	public double getRestricao() {
-		double restricao = getSaldo()+getLimite();
-		return restricao;
-	}
-	
 	public double checarSaldo() {
-		return getRestricao();
+		return saldo + limite;
 	}
 	
 	/*
