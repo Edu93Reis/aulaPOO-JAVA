@@ -3,10 +3,10 @@ package T21;
 public class Eleicao {
 
 	public static void main(String[] args) {
-		Partido p1 = new Partido("Partido dos Trabalhadores", "Blabla" ,"PT", 13);
-		Partido p2 = new Partido("Partido Socialista do Brasil", "Blabla", "PSB", 40);
-		Partido p3 = new Partido("Partido Socialismo e Liberdade", "bla", "PSOL", 50);
-		Partido p4 = new Partido("Partido Algum", "Nenhuma", "PA", 14);
+		Partido p1 = new Partido(Partidos.PT.getPartido(), Partidos.PT.getIdeologia(), Partidos.PT.getSigla(), Partidos.PT.getNum());
+		Partido p2 = new Partido(Partidos.PSDB.getPartido(), Partidos.PSDB.getIdeologia(), Partidos.PSDB.getSigla(), Partidos.PSDB.getNum());
+		Partido p3 = new Partido(Partidos.PSOL.getPartido(), Partidos.PSOL.getIdeologia(), Partidos.PSOL.getSigla(), Partidos.PSOL.getNum());
+		Partido p4 = new Partido(Partidos.PTB.getPartido(), Partidos.PTB.getIdeologia(), Partidos.PTB.getSigla(), Partidos.PTB.getNum());
 		Candidato c1 = new Candidato("Marcelinho", "Brasileiro", p1);
 		Candidato c2 = new Candidato("Ronaldo", "Americano", p2);
 		Candidato c3 = new Candidato("Tiririca", "Grego", p3);
@@ -23,7 +23,7 @@ public class Eleicao {
 				" está no partido " + c2.getPartido().getNome());
 		c3.setPartido(p2);
 		System.out.println("Candidato: "+ c3.getNome() + " de nacionalidade " + c3.getNacionalidade() +
-				" está no partido " + c3.getPartido().getNome());
+				" está no partido " + c3.getPartido().getNome()+ " Num: "+ c3.getPartido().getNum() + " Ideologia: " + c3.getPartido().getIdeologia());
 		
 		
 	}
