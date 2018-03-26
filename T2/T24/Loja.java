@@ -4,8 +4,8 @@ public class Loja {
 	public static void main(String arg[]) {
 		Produtos p1 = new Produtos();
 		
-		p1.setTipo(Livros.Epub);
-		p1.precoLivro(Livros.Epub);
+		p1.setTipo(Livros.EPUB);
+		p1.precoLivro(Livros.EPUB);
 		p1.getTipo();
 		System.out.println (" custa: "+ p1.getPreco() + " reais");
 		p1.setDescription("Epub é divertido");
@@ -13,8 +13,8 @@ public class Loja {
 		
 		Produtos p2 = new Produtos();
 		
-		p2.setTipo(Livros.Livro_Fisico);
-		p2.precoLivro(Livros.Livro_Fisico);
+		p2.setTipo(Livros.LIVRO);
+		p2.precoLivro(Livros.LIVRO);
 		p2.getTipo();
 		System.out.println(" custa: " + p2.getPreco() + " reais \n");
 		System.out.println("Descrição Livro Fisíco: " + p2.getDescription());

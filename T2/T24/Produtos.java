@@ -40,17 +40,17 @@ public class Produtos {
 	}
 	
 	public void getTipo() {
-		if(this.tipo == Livros.Epub) {
-			System.out.print(Livros.Epub.getLivro());
+		if(this.tipo == Livros.EPUB) {
+			System.out.print(Livros.EPUB.getLivro());
 		} else if(this.tipo == Livros.PDF) {
 			System.out.print(Livros.PDF.getLivro());
 		}else {
-			System.out.print(Livros.Livro_Fisico.getLivro());
+			System.out.print(Livros.LIVRO.getLivro());
 		}
 	}
 	
 	public void precoLivro(Livros tipo) {
-		if(this.tipo == Livros.Epub) {
+		if(this.tipo == Livros.EPUB) {
 			this.preco = 20.00;
 		}else if(this.tipo == Livros.PDF) {
 			this.preco = 40.00;
@@ -60,11 +60,11 @@ public class Produtos {
 	}
 	
 	public double getPreco() {
-		if(this.tipo == Livros.Epub) {
+		if(this.tipo == Livros.EPUB) {
 			return this.preco;
 		}else if(this.tipo == Livros.PDF) {
 			return this.preco;
-		}else if (this.tipo == Livros.Livro_Fisico){
+		}else if (this.tipo == Livros.LIVRO){
 			return this.preco;
 		}else {
 			System.out.println("Tipo inexixtente!!");

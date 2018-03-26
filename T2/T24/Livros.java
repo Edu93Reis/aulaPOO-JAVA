@@ -1,7 +1,7 @@
 package T24;
 
 public enum Livros {
-	Epub("Epub"), PDF("PDF"), Livro_Fisico("Livro Físico");
+	EPUB("Epub"), PDF("PDF"), LIVRO("Livro Físico");
 	
 	private String livro;
 	

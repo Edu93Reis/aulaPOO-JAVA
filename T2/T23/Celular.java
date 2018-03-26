@@ -34,8 +34,7 @@ public class Celular {
 		if(this.ligado == false) {
 			if(this.bateria.getCarga()>20) {
 				this.ligado = true;
-				System.out.println("Usuário: " + getUser() + ", Nome: " + "Nome de quem???");
-				//precisa mostrar outro nome?? Nome do celular?? 
+				System.out.println("Usuário: " + getUser() + ", Id celular: " + getId()); 
 				
 				bateria.setCarga(bateria.getCarga()-20);
 				

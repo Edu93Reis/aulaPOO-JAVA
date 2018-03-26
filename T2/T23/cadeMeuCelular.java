@@ -10,7 +10,7 @@ public class cadeMeuCelular {
 		System.out.println(b1.Descarrega());
 		System.out.println(b1.Descarrega());
 		Celular c1 = new Celular("Eduardo", b1);
-		System.out.println("Id do celular: "+c1.getId());
+		c1.ligaCelular();
 		c1.tocaSom();
 		c1.desligaCelular();
 		c1.ligaCelular();
@@ -28,7 +28,7 @@ public class cadeMeuCelular {
 		System.out.println(b2.getCarga());
 		
 		Celular c2 = new Celular("Caio", b2);
-		System.out.println("Id do celular: "+c2.getId());
+		c2.ligaCelular();
 		System.out.println(b2.Carrega());
 		System.out.println(b2.Carrega());
 		System.out.println(b2.Carrega());
@@ -40,7 +40,7 @@ public class cadeMeuCelular {
 		c2.ligaCelular();
 		
 		Celular c3 = new Celular("Caio", b2);
-		System.out.println("Id do celular: "+c3.getId());
+		c3.ligaCelular();
 	}
 
 }

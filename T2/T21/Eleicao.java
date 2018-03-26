@@ -12,18 +12,20 @@ public class Eleicao {
 		Candidato c3 = new Candidato("Tiririca", "Grego", p3);
 		
 		System.out.println("Candidato: "+ c1.getNome() + " de nacionalidade " + c1.getNacionalidade() +
-				" está no partido " + c1.getPartido().getNome());
+				" está no partido " + c1.getPartido().getNome()+ " Num: " + c1.getPartido().getNum() + " Ideologia: " + c1.getPartido().getIdeologia());
 		c1.setPartido(p3);
 		System.out.println("Candidato: "+ c1.getNome() + " de nacionalidade " + c1.getNacionalidade() +
-				" está no partido " + c1.getPartido().getNome());
+				" está no partido " + c1.getPartido().getNome()+" Num: " + c1.getPartido().getNum() + " Ideologia: " + c1.getPartido().getIdeologia());
 		c1.setPartido(p4);
 		System.out.println("Candidato: "+ c1.getNome() + " de nacionalidade " + c1.getNacionalidade() +
-				" está no partido " + c1.getPartido().getNome());
+				" está no partido " + c1.getPartido().getNome()+" Num: " + c1.getPartido().getNum() + " Ideologia: " + c1.getPartido().getIdeologia());
 		System.out.println("Candidato: "+ c2.getNome() + " de nacionalidade " + c2.getNacionalidade() +
-				" está no partido " + c2.getPartido().getNome());
+				" está no partido " + c2.getPartido().getNome()+" Num: " + c2.getPartido().getNum() + " Ideologia: " + c2.getPartido().getIdeologia());
+		System.out.println("Candidato: "+ c3.getNome() + " de nacionalidade " + c3.getNacionalidade() +
+				" está no partido " + c3.getPartido().getNome()+ " Num: " + c3.getPartido().getNum() + " Ideologia: " + c3.getPartido().getIdeologia());		
 		c3.setPartido(p2);
 		System.out.println("Candidato: "+ c3.getNome() + " de nacionalidade " + c3.getNacionalidade() +
-				" está no partido " + c3.getPartido().getNome()+ " Num: "+ c3.getPartido().getNum() + " Ideologia: " + c3.getPartido().getIdeologia());
+				" está no partido " + c3.getPartido().getNome()+ " Num: " + c3.getPartido().getNum() + " Ideologia: " + c3.getPartido().getIdeologia());
 		
 		
 	}

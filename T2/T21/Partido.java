@@ -23,7 +23,7 @@ public class Partido {
 		return this.sigla;
 	}
 
-	public int getNum() {
-		return num;
+	public int getNum() {		
+		return this.num;		
 	}
 }
