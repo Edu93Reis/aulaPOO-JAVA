@@ -6,7 +6,8 @@ public class Loja {
 		
 		p1.setTipo(Livros.Epub);
 		p1.precoLivro(Livros.Epub);
-		System.out.println("O preço do "+ p1.getTipo() +"  é: "+ p1.getPreco() + " reais");
+		p1.getTipo();
+		System.out.println (" custa: "+ p1.getPreco() + " reais");
 		p1.setDescription("Epub é divertido");
 		System.out.println("Descrição Epub: " + p1.getDescription());
 		
@@ -14,14 +15,16 @@ public class Loja {
 		
 		p2.setTipo(Livros.Livro_Fisico);
 		p2.precoLivro(Livros.Livro_Fisico);
-		System.out.println("O "+ p2.getTipo() +" custa: " + p2.getPreco() + " reais");
+		p2.getTipo();
+		System.out.println(" custa: " + p2.getPreco() + " reais \n");
 		System.out.println("Descrição Livro Fisíco: " + p2.getDescription());
 	
 		Produtos p3 = new Produtos();
 		
 		p3.setTipo(Livros.PDF);
 		p3.precoLivro(Livros.PDF);
-		System.out.println("O preço do "+ p3.getTipo() +" é: "+ p3.getPreco() + " reais");
+		p3.getTipo();
+		System.out.println(" é: "+ p3.getPreco() + " reais");
 		p3.setDescription("PDF");
 		System.out.println("Descrição PDF: " + p3.getDescription());
 		

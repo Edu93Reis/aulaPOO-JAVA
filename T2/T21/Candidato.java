@@ -14,15 +14,7 @@ public class Candidato {
 	public Candidato(String nome, String nacionalidade, Partido partido) {
 		this.nome = nome;
 		this.nacionalidade = nacionalidade;
-		if(partido.getNome().equals(null)) {
-			Scanner a = new Scanner(System.in);
-			System.out.println("Nome do partido é obrigatório, digite nome: ");
-			String p1 = a.nextLine();
-			partido.setNome(p1);
-			a.close();
-		}else {
-			this.partido = partido;
-		}
+		this.partido = partido;
 	}
 	
 	public String getNome() {

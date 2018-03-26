@@ -6,7 +6,7 @@ public class Eleicao {
 		Partido p1 = new Partido("Partido dos Trabalhadores", "Blabla" ,"PT", 13);
 		Partido p2 = new Partido("Partido Socialista do Brasil", "Blabla", "PSB", 40);
 		Partido p3 = new Partido("Partido Socialismo e Liberdade", "bla", "PSOL", 50);
-		Partido p4 = new Partido("", "Nenhuma", "BLA", 14);
+		Partido p4 = new Partido("Partido Algum", "Nenhuma", "PA", 14);
 		Candidato c1 = new Candidato("Marcelinho", "Brasileiro", p1);
 		Candidato c2 = new Candidato("Ronaldo", "Americano", p2);
 		Candidato c3 = new Candidato("Tiririca", "Grego", p3);

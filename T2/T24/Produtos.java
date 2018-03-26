@@ -39,13 +39,13 @@ public class Produtos {
 		this.tipo = tipo;
 	}
 	
-	public String getTipo() {
+	public void getTipo() {
 		if(this.tipo == Livros.Epub) {
-			return "Epub";
+			System.out.print(Livros.Epub.getLivro());
 		} else if(this.tipo == Livros.PDF) {
-			return "PDF";
+			System.out.print(Livros.PDF.getLivro());
 		}else {
-			return "Livro Físico";
+			System.out.print(Livros.Livro_Fisico.getLivro());
 		}
 	}
 	
