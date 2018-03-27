@@ -4,11 +4,11 @@ public class cadeMeuCelular {
 
 	public static void main(String[] args) {
 		Bateria b1 = new Bateria(70);
-		System.out.println(b1.Carrega());
-		System.out.println(b1.Carrega());
-		System.out.println(b1.Carrega());
-		System.out.println(b1.Descarrega());
-		System.out.println(b1.Descarrega());
+		System.out.println(b1.carrega());
+		System.out.println(b1.carrega());
+		System.out.println(b1.carrega());
+		System.out.println(b1.descarrega());
+		System.out.println(b1.descarrega());
 		Celular c1 = new Celular("Eduardo", b1);
 		c1.ligaCelular();
 		c1.tocaSom();
@@ -29,12 +29,12 @@ public class cadeMeuCelular {
 		
 		Celular c2 = new Celular("Caio", b2);
 		c2.ligaCelular();
-		System.out.println(b2.Carrega());
-		System.out.println(b2.Carrega());
-		System.out.println(b2.Carrega());
-		System.out.println(b2.Carrega());
-		System.out.println(b2.Carrega());
-		System.out.println(b2.Carrega());
+		System.out.println(b2.carrega());
+		System.out.println(b2.carrega());
+		System.out.println(b2.carrega());
+		System.out.println(b2.carrega());
+		System.out.println(b2.carrega());
+		System.out.println(b2.carrega());
 		System.out.println("Carga atual: "+b2.getCarga());
 		
 		c2.ligaCelular();

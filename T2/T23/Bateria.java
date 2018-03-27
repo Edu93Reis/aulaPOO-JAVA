@@ -29,7 +29,7 @@ public class Bateria {
 		}
 	}
 	
-	public int Carrega(){
+	public int carrega(){
 		if(this.carga<95) {
 			this.carga += 5;
 		}else {
@@ -39,7 +39,7 @@ public class Bateria {
 		return this.carga;
 	}
 	
-	public int Descarrega(){		
+	public int descarrega(){		
 		if(getCarga()>=10) {
 			this.carga -= 10;
 		} else {

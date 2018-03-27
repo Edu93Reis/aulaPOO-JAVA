@@ -3,8 +3,8 @@ package T22;
 public class Doc {	
 	public double transferir(Cliente c1, Cliente c2, double quantia) {
 		if(c1.checarSaldo()>=quantia) {
-			c2.setSaldo(c2.getSaldo()+quantia);
-			c1.setSaldo(c1.getSaldo()-quantia);
+			c2.setSaldo(c2.aumentaSaldo(quantia));
+			c1.setSaldo(c1.retiraSaldo(quantia));
 			return c2.getSaldo();
 		}else {
 			System.out.println("Saldo insuficiente para trasnferência!!");

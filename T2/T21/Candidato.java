@@ -1,15 +1,8 @@
 package T21;
 
-import java.util.Scanner;
-
 public class Candidato {
 	private String nome, nacionalidade;
 	private Partido partido;
-	Scanner a;
-	
-	public void Recebe() {
-		a = new Scanner(System.in);
-	}
 	
 	public Candidato(String nome, String nacionalidade, Partido partido) {
 		this.nome = nome;

@@ -20,7 +20,7 @@ public class Cliente {
 
 	//necessario para calculo de Doc
 	public void setSaldo(double saldo) {
-		this.saldo = Math.max(0, saldo);
+		this.saldo = saldo;
 	}
 
 	public double getLimite() {
@@ -38,6 +38,17 @@ public class Cliente {
 			return 0;
 		}
 	}
+	
+	public double retiraSaldo(double val) {
+		this.saldo -= val;
+		return this.saldo;
+	}
+	
+	public double aumentaSaldo(double val) {
+		this.saldo += val;
+		return this.saldo;
+	}
+	
 	
 	public double checarSaldo() {
 		return saldo + limite;
