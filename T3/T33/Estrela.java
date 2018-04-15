@@ -1,8 +1,8 @@
 package T33;
 
 public class Estrela {
-	String nome, cor;
-	Double temperatura;
+	private String nome, cor;
+	private Double temperatura;
 	
 	public Estrela(String nome, String cor, Double temperatura) {
 		this.nome = nome;
@@ -14,5 +14,9 @@ public class Estrela {
 		System.out.println("Nome: " + this.nome);
 		System.out.println("Cor: " + this.cor);
 		System.out.println("Temperatura: " + this.temperatura);
-	}	
+	}
+	
+	public double getTemperatura() {
+		return this.temperatura;
+	}
 }

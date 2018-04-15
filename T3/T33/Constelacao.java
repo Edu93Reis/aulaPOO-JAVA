@@ -3,8 +3,8 @@ package T33;
 import java.util.ArrayList;
 
 public class Constelacao {
-	String nome;
-	ArrayList<Estrela> estrelas;
+	private String nome;
+	private ArrayList<Estrela> estrelas;
 	
 	public Constelacao(String nome) {
 		this.nome = nome;
@@ -27,7 +27,7 @@ public class Constelacao {
 		double soma = 0;
 		
 		for(Estrela e: estrelas) {
-			soma += e.temperatura;
+			soma += e.getTemperatura();
 		}
 		
 		return soma;
