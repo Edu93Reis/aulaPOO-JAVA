@@ -1,8 +1,10 @@
-package T31;
+package t31;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Estante {
+	Scanner s;
 	private String nome;
 	private Categoria categoria;
 	private ArrayList<Livro> livros;
@@ -11,75 +13,64 @@ public class Estante {
 		this.nome = nome;
 		this.categoria = categoria;
 		this.livros = new ArrayList<Livro>();
+		this.s = new Scanner(System.in);
 	}
-	
-	
-	//caso entrada de instância de objeto livro não esteja vazia
-	//add dados ao ArrayList Livro
-	public void inserirLivro(Livro livro) {
-		if(livro != null) {
-			this.livros.add(livro);
-		}
-	}
-	
+
 	public String getNome() {
-		return this.nome;
+		return nome;
 	}
-	
-	public String getCategoria() {
-		return this.categoria.getTipo();
+
+	public Categoria getCategoria() {
+		return categoria;
 	}
-	
-	/* alterar para retornar como lista [] */
-	public Livro[] listarLivrofilosofia() {
-		//cria contador para inicializar vetor estático
-		int qt = 0;
-		//cria vetor estático e, logo abaixo, cria instância deste vetor
-		Livro[] result;
-		result = new Livro[qt];
-		
-		if(this.getCategoria() == "Filosofia") {
-			// para cada objeto de categoria Filosofia add objeto l
-			// acumula o contador qt++
-			for(Livro l : livros) {
-				result[qt++] = l;
-			}
+
+	public void getLivros() {
+		int y = 0;
+		for (int i=0; i < this.livros.size() ; i ++) {
+			System.out.println("Livro " + y);
+			System.out.println("Título:" + livros.get(i).getNome());
+			System.out.println("Autor:" + livros.get(i).getAutor());
+			System.out.println("Ano:" 	+ livros.get(i).getAno());
+			y++;
 		}
-		return result;		
+
 	}
 	
-	public int contarCiencia() {
-		int countBooks = 0;
-		
-		if(this.getCategoria() == "Ciência") {
-			for(int i = 0; i<this.livros.size(); i++) {
-				countBooks ++;
-			}
-		}
-	
-		return countBooks;
+	public ArrayList getLivro() {
+		return this.livros;
 	}
 	
-	public void listarTudo() {
-		for(Livro l : livros) {
-			System.out.println("Nome: " + l.getNome() + " Autor: " + l.getAutor() + " Ano de Publicação: " + l.getAnoPublicacao());
-		}
+	public Livro getLivro(int i) {
+		return this.livros.get(i);
 	}
 	
-	public void removerLivro(Livro livro) {
+	void removeLivro(Livro livro) {
 		this.livros.remove(livro);
-		System.out.println("Livro removido com sucesso!");
+		
 	}
 	
-	public ArrayList<String> listarAutores(Categoria cat){
-		ArrayList<String> autores;
-		autores = new ArrayList<String>();
-				
-		if(this.categoria == cat) {
-			for(Livro l : livros)
-				autores.add(l.getNome());
-		}	
+	void insereLivro(Livro livro) {
+
+		this.livros.add(livro);		
 		
-		return autores;
 	}
+	
+	public Livro criaLivro() {
+		System.out.println("Insira o titulo do livro:");
+		String nome = s.next();
+		System.out.println("Insira o autor do livro:");
+		String autor = s.next();
+		int ano;
+		do {
+			System.out.println("Insira o ano de publicação do livro:");
+			ano = Math.max(0,s.nextInt());
+				if (ano > 2018) {
+					System.out.println("Ano inválido");
+				}
+		}
+		while (ano > 2018);
+		Livro l = new Livro(nome,autor,ano);
+		return l;
+	}
+	
 }

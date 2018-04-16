@@ -1,25 +1,27 @@
-package T31;
+package t31;
 
 public class Livro {
-	private String nome;
-	private String autor;
-	private String anoPublicacao;
+	private String nome, autor;
+	private int ano;
 	
-	public Livro(String nome, String autor, String anoPublicacao) {
+	public Livro(String nome, String autor, int ano) {
 		this.nome = nome;
 		this.autor = autor;
-		this.anoPublicacao = anoPublicacao;
+		this.ano = ano;
 	}
-	
+
 	public String getNome() {
-		return this.nome;
+		return nome;
 	}
-	
+
 	public String getAutor() {
-		return this.autor;
+		return autor;
+	}
+
+	public int getAno() {
+		return ano;
 	}
 	
-	public String getAnoPublicacao() {
-		return this.anoPublicacao;
-	}
+
+		
 }
