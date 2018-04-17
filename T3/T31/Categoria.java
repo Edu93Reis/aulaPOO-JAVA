@@ -1,4 +1,4 @@
-package t31;
+package T31;
 
 public enum Categoria {
 	CIÊNCIA, FILOSOFIA, LITERATURA;

@@ -1,4 +1,4 @@
-package t31;
+package T31;
 
 import java.util.Scanner;
 

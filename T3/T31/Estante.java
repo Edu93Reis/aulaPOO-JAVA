@@ -1,4 +1,4 @@
-package t31;
+package T31;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -44,12 +44,12 @@ public class Estante {
 		return this.livros.get(i);
 	}
 	
-	void removeLivro(Livro livro) {
+	public void removeLivro(Livro livro) {
 		this.livros.remove(livro);
 		
 	}
 	
-	void insereLivro(Livro livro) {
+	public void insereLivro(Livro livro) {
 
 		this.livros.add(livro);		
 		

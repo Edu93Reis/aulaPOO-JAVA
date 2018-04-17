@@ -1,4 +1,4 @@
-package t31;
+package T31;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -7,8 +7,7 @@ public class Biblioteca {
 	private String nome;
 	private ArrayList<Estante> estante;
 	
-	Scanner s;
-	
+	Scanner s;	
 	
 	public Biblioteca(String nome) {
 		this.nome = nome;
@@ -26,11 +25,11 @@ public class Biblioteca {
 		return estante;
 	}
 	
-	void inserirEstante(Estante estante) {
+	public void inserirEstante(Estante estante) {
 		this.estante.add(estante);
 	}
 	
-	void criarEstante() {
+	public void criarEstante() {
 		String nome;
 		Categoria categoria;
 		System.out.println("Insira o nome da estante:");
@@ -41,7 +40,7 @@ public class Biblioteca {
 		this.inserirEstante(estante);
 	}
 	
-	ArrayList<Livro> listarFilosofia() {
+	public ArrayList<Livro> listarFilosofia() {
 		ArrayList<Livro> novo = new ArrayList<Livro>();
 		for(int i=0; i < estante.size(); i++) {
 			if(this.estante.get(i).getCategoria() == Categoria.FILOSOFIA) {
@@ -53,7 +52,7 @@ public class Biblioteca {
 	return novo;
 	}
 	
-	int contarCiencia() {
+	public int contarCiencia() {
 		int cont=0;
 		for(int i=0; i < estante.size(); i++) {
 			if(this.estante.get(i).getCategoria() == Categoria.CIÊNCIA) {
@@ -63,7 +62,7 @@ public class Biblioteca {
 	return cont;
 	}
 			
-	ArrayList<String> listarAutores(Categoria cat){
+	public ArrayList<String> listarAutores(Categoria cat){
 		ArrayList<String> lista = new ArrayList<String>();
 		for (int i = 0; i < estante.size(); i++) {
 			if(this.getEstante(i).getCategoria()== cat) {			
@@ -78,7 +77,7 @@ public class Biblioteca {
 	return lista;
 	}
 	
-	void listarTudo() {	
+	public void listarTudo() {	
 		for(int i=0; i < estante.size(); i++) {
 			System.out.println("Estante:" + this.estante.get(i).getNome());
 			this.estante.get(i).getLivros();
