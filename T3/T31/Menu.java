@@ -40,6 +40,9 @@ public class Menu {
 					break;
 				case 4:
 					int i = this.escolheEstante();
+					if (i==-1) {
+						break;
+					}
 					int livro;
 					if(b.getEstante(i).getLivro().size()==0)
 						System.out.println("Não há livros para excluir");
@@ -59,6 +62,7 @@ public class Menu {
 						while (livro >= b.getEstante(i).getLivro().size());
 					}
 				case 5:
+					
 					System.out.println(b.contarCiencia());
 					break;
 				case 6:
@@ -72,8 +76,8 @@ public class Menu {
 					}
 					break;
 				case 7:
-					System.out.println("Escolha a categoria");
-					Categoria cat = Categoria.valueOf(s.next());
+					
+					Categoria cat = b.escolheCategoria();
 					for(int w = 0; w < b.listarAutores(cat).size(); w++) {
 						System.out.println(b.listarAutores(cat).get(w));
 					};
@@ -96,19 +100,28 @@ public class Menu {
 	
 	public int escolheEstante() {
 		int opt;
-		do {
-			int y = 0 ;
-			System.out.println("Escolha a estante:");
-			for (int x=0; x < b.getEstante().size() ; x++) {
-				System.out.println("Estante " + y + ":" + b.getEstante(x).getNome());
-				y++;
-			}
-			opt = Math.max(0, s.nextInt());
-			if (opt >= b.getEstante().size()) {
-				System.out.println("Estante inválida.");
-			}
+		if (b.getEstante().size() == 0) {
+			System.out.println("Não há estantes disponíveis na biblioteca.");
+			return -1;
 		}
-		while (opt >= b.getEstante().size());
-		return opt;
+		else {
+			do {
+				int y = 0 ;
+				System.out.println("Escolha a estante:");
+				for (int x=0; x < b.getEstante().size() ; x++) {
+					System.out.println("Estante " + y + ":" + b.getEstante(x).getNome());
+					y++;
+				}
+	
+				opt = Math.max(0, s.nextInt());
+				if (opt >= b.getEstante().size()) {
+					System.out.println("Estante inválida.");
+				}
+			}
+			while (opt >= b.getEstante().size());
+			return opt;
+		}
 	}
+	
+
 }

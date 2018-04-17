@@ -36,7 +36,7 @@ public class Biblioteca {
 		System.out.println("Insira o nome da estante:");
 		nome= s.next();
 		System.out.println("Insira a categoria da estante:");
-		categoria = Categoria.valueOf(s.next());
+		categoria = this.escolheCategoria();
 		Estante estante = new Estante(nome,categoria);
 		this.inserirEstante(estante);
 	}
@@ -72,6 +72,9 @@ public class Biblioteca {
 				}
 			}
 		}
+		if (lista.size() == 0) {
+			System.out.println("Não há autores dessa categoria.");
+		}
 	return lista;
 	}
 	
@@ -80,6 +83,26 @@ public class Biblioteca {
 			System.out.println("Estante:" + this.estante.get(i).getNome());
 			this.estante.get(i).getLivros();
 		}
+		
+	}
+	
+	public Categoria escolheCategoria() {
+		System.out.println("1 - Filosofia.");
+		System.out.println("2 - Ciência.");
+		System.out.println("3 - Literatura.");
+		int opt = s.nextInt();
+		switch(opt) {
+			case 1:
+				return Categoria.FILOSOFIA;
+		case 2:
+				return Categoria.CIÊNCIA;
+		case 3:
+				return Categoria.LITERATURA;
+		default:
+				System.out.println("Opção inválida.");
+				this.escolheCategoria();
+		}
+		return null;
 		
 	}
 }
