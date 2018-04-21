@@ -21,9 +21,15 @@ public class Regular extends Usuario{
 	public void dashboard() {
 	  Scanner s = new Scanner(System.in);
 		
-		System.out.println("Cadastre login: ");
-		login = s.nextLine();
-	
+		 do { 
+			System.out.println("Cadastre login: ");
+			login = s.nextLine();
+		
+			if(login.equals(null) || login.equals("")) {
+				System.out.println("Campo login não pode ser valor vazio. Preencha login!");
+			}
+		 }while(login.equals(null) || login.equals(""));
+		 
 	  s.nextLine();	
 	}
 	

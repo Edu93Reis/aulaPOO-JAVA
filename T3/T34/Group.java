@@ -23,8 +23,16 @@ public class Group extends Usuario {
 		
 	    Scanner s = new Scanner(System.in);
 	    
-		System.out.println("Ao apagar o grupo você apagará todos os usuários contidos nele, deseja prosseguir? [s/n]");
-		op = s.nextLine();
+	    do {
+			
+	    	System.out.println("Ao apagar o grupo você apagará todos os usuários contidos nele, deseja prosseguir? [s/n]");
+			op = s.nextLine();
+			
+			if(!(op.toLowerCase().equals("s") || op.toLowerCase().equals("n"))) {
+				System.out.println("Entrada inválida, digite [s] para sim ou [n] para não ..");
+			}
+				
+	    }while(!(op.toLowerCase().equals("s") || op.toLowerCase().equals("n")));
 		
 		if(op.toLowerCase().equals("s")) {
 			System.out.println("Grupo deletado com sucesso!!");

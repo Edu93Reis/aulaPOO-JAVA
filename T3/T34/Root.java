@@ -11,7 +11,7 @@ public class Root extends Usuario{
 	}
 	
 	public void despedidaRoot() {
-		System.out.println("Você está encerrando a sseão "+ super.login+" todos os usuários ativos serão encerrados automaticamente.");
+		System.out.println("Você está encerrando a sessão "+ super.login+" , todos os usuários ativos serão encerrados automaticamente.");
 	}
 	
 	public void descreveRoot() {
@@ -22,8 +22,15 @@ public class Root extends Usuario{
 		String op1;	
 	    Scanner s = new Scanner(System.in);
 		
-		System.out.println("Deseja realmente apagar todos os usuários? [s/n]");
-		op1 = s.nextLine();
+	    do {
+			System.out.println("Deseja realmente apagar todos os usuários? [s/n]");
+			op1 = s.nextLine();
+			if(!(op1.toLowerCase().equals("s") || op1.toLowerCase().equals("n"))) {
+				System.out.println("Entrada inválida, digite [s] para sim ou [n] para não ..");
+			}
+				
+	    }while(!(op1.toLowerCase().equals("s") || op1.toLowerCase().equals("n")));
+			
 		
 		if(op1.toLowerCase().equals("s")) {
 			System.out.println("Usuários deletados com sucesso!!");
