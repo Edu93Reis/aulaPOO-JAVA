@@ -1,4 +1,4 @@
-package T1;
+package Biblioteca;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -40,19 +40,11 @@ public class Estante {
 		return this.livros;
 	}
 	
-	public void getLivro(String nome) {
-		for(Livro l: livros) {
-			if(l.getNome().equals(nome)) {
-				System.out.println(l);
-			}
-		}
-	}
-	
 	public Livro getLivro(int i) {
 		return this.livros.get(i);
 	}
 	
-	public void removeLivro(Livro livro) {
+	public void removeLivro(Livro livro){
 		this.livros.remove(livro);
 		
 	}

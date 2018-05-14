@@ -1,4 +1,4 @@
-package T1;
+package Biblioteca;
 
 public enum Categoria {
 	CIÊNCIA, FILOSOFIA, LITERATURA;

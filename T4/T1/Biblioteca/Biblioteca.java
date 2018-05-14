@@ -1,4 +1,4 @@
-package T1;
+package Biblioteca;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -7,13 +7,23 @@ public class Biblioteca {
 	private String nome;
 	private ArrayList<Estante> estante;
 	
-	Scanner s;	
+	private Scanner s;
+	
 	
 	public Biblioteca(String nome) {
 		this.nome = nome;
 		this.estante = new ArrayList<Estante>();
 		this.s = new Scanner(System.in);
+		Estante x = new Estante("1",Categoria.CIÊNCIA);
+		Estante y = new Estante("2",Categoria.FILOSOFIA);
+		Livro a = new Livro("Exemplo 1", "Autor 1", 1999);
+		Livro b = new Livro("Exemplo 2", "Autor 2", 1997);
+		estante.add(x);
+		estante.add(y);
+		x.insereLivro(a);
+		y.insereLivro(b);
 	}
+	
 	public String getNome() {
 		return nome;
 	}

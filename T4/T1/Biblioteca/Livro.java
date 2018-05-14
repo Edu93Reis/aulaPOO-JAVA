@@ -1,4 +1,4 @@
-package T1;
+package Biblioteca;
 
 public class Livro {
 	private String nome, autor;

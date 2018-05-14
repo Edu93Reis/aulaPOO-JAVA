@@ -1,102 +1,41 @@
-package T1;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import user.Admin;
+import user.Bibliotecario;
+import user.Guest;
+import user.User;
 
 public class Login {
-	private String usuario, login;
-	private Scanner s;
+	private String  admin="admin";
+	private String  bibliotecario="bibliotecario";
+	private String  guest="guest";
+
 	
-	public Login(Usuario u) {
-		this.usuario = u.getClass().getCanonicalName();
-		this.login = "";
-		this.s = new Scanner(System.in);
-	}
 	
-	public String getUsu() {
-		return this.usuario;
+	public User Validation() {
+		Menu m = new Menu();
+		String[] x = new String[2];
+		x = m.menu();
+		if (x[0].equals(admin) && x[1].equals(admin)){
+			Admin temp = new Admin();
+			return temp;
+		}
+		else if(x[0].equals(bibliotecario) && x[1].equals(bibliotecario)) {
+			Bibliotecario temp = new Bibliotecario();
+			return temp;
+		}
+		else if(x[0].equals(guest) && x[1].equals(guest)) {
+			Guest temp = new Guest();
+			return temp;
+		}
+		return null;
 	}
+
 	
-	public void login() {		
-		
-		switch(this.usuario){
-			case "T1.Guest":
-				System.out.println("Digite login: ");
-				login = s.nextLine();
-				Guest g = new Guest(login);
-				
-				if(true) {
-					g.boasVindas();
-					System.out.println("Entre opção: ");
-					System.out.println("1 - para consultar livro");
-					System.out.println("2 - para sair");
-					int opt = s.nextInt();
-					
-					switch(opt) {
-						case 1:
-							System.out.println("Digite nome do livro: ");
-							String nm = s.nextLine();
-							g.consulta(nm);
-						break;
-						case 2:
-							g.despedida();
-						break;
-						default:
-							System.out.println("Opção inexistente!");
-						break;
-					}
-				}else {
-					this.erro();
-				}
-			break;
-			case "T1.Bibliotecário":
-				System.out.println("Digite login: ");
-				login = s.nextLine();
-				Bibliotecario b = new Bibliotecario(login);
-				
-				if(true) {
-					b.boasVindas();
-					System.out.println("Entre opção: ");
-					System.out.println("1 - para inserir livro: ");
-					System.out.println("2 - para sair: ");
-					int opt1 = s.nextInt();
-					
-					switch(opt1) {
-						case 1:
-							System.out.println("Digite nome do livro: ");
-							String nm = s.nextLine();
-							b.insereLivro();
-						break;
-						case 2:
-							b.despedida();
-						break;
-						default:
-							System.out.println("Opção inexistente!");
-						break;
-					}
-				}else {
-					this.erro();
-				}
-			break;
-			case "T1.Admin":
-				System.out.println("Digite login: ");
-				login = s.nextLine();
-				Admin a = new Admin(login);
-				
-				if(true) {
-					a.boasVindas();
-					a.acao();
-				}else {
-					this.erro();
-				}
-			break;
-			default:
-				this.erro();
-			break;
-		}		
+	public void CallMenu(User x) {
+		if (x.equals(null)) {
+			System.out.println("Fim...");
+		}
+		x.Login();
 	}
-	
-	public void erro() {
-		System.out.println("Erro!");
-	}
+
 }
