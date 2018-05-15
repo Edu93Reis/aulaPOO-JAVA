@@ -12,7 +12,7 @@ public class Produto {
 	}
 	
 	private double getPreco() {
-		return this.preco * this.imposto.aliquota;
+		return this.preco * this.imposto.getAliquota();
 	}
 	
 	private String getNome() {

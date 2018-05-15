@@ -1,10 +1,14 @@
 package T3;
 
 public class Imposto {
-	protected double aliquota;
+	private double aliquota;
 	
 	protected Imposto(double aliquota) {
 		this.aliquota = aliquota;
+	}
+	
+	public double getAliquota() {
+		return this.aliquota;
 	}
 }
 
